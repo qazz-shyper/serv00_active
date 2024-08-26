@@ -75,7 +75,7 @@ async def main():
         is_logged_in = await login(username, password, panelnum)
 
         if is_logged_in:
-            now_utc = format_to_iso(datetime.utcnow(datetime.UTC))
+            now_utc = format_to_iso(datetime.now(datetime.UTC))
             now_beijing = format_to_iso(datetime.now(datetime.UTC) + timedelta(hours=8))
             success_message = f'serv00账号 {username} 登录成功！'
             print(success_message)
